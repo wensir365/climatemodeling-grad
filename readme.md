@@ -1,7 +1,8 @@
 # Readme
 
 ### Get a copy
-- git clone https://github.com/wensir365/climatemodeling-grad.git
+- [Linux] git clone https://github.com/wensir365/climatemodeling-grad.git
+- [Windows] download from webpage: https://github.com/wensir365/climatemodeling-grad
 
 ### Add, Rm, Commit, and Push to GitHub
 - git add FOLDERNAME/FILENAME
