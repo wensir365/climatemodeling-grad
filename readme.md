@@ -1,7 +1,9 @@
-## Get a copy
+# Readme
+
+### Get a copy
 - git clone https://github.com/wensir365/climatemodeling-grad.git
 
-## Add, Rm, Commit, and Push to GitHub
+### Add, Rm, Commit, and Push to GitHub
 - git add FOLDERNAME/FILENAME
 - git rm  FOLDERNAME/FILENAME
 - git commit -m "01 directory done"
