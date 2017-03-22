@@ -1,7 +1,7 @@
-[ Get a copy ]
+## Get a copy
 git clone https://github.com/wensir365/climatemodeling-grad.git
 
-[ Add, Commit, and Push to GitHub ]
+## Add, Commit, and Push to GitHub
 git add FOLDERNAME/FILENAME
 git commit -m "01 directory done"
 git push origin master
