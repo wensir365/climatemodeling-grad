@@ -1,0 +1,6 @@
+gfortran -o run main.f95
+./run > "out.txt"
+
+gnuplot draw-absvalue.gnuplot
+#gnuplot draw-diff.gnuplot
+
