@@ -1,0 +1,3 @@
+gfortran -o bigplussmall bigplussmall.f95
+gfortran -o smalldiff    smalldiff.f95
+gfortran -o sqrt2        sqrt2.f95
