@@ -20,6 +20,7 @@ program main
 			call heun2(v)				! old v in, new v out
 			print *, v
 		end do
+		print *, " "					! print a blank line to separate trajactories
 	end do
 
 contains

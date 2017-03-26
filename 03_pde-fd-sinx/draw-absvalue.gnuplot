@@ -5,7 +5,7 @@ set xlabel "x"
 set ylabel "sin(x)"
 
 set yrange [-1.1:1.1]
-set xrange [0:6.28]
+set xrange [0:2*pi]
 
 set title "Analytical and Numercial solutions of d(sinx)/dx"
 

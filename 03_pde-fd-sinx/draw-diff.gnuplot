@@ -5,7 +5,7 @@ set xlabel "x"
 set ylabel "sin(x)"
 
 set yrange [-0.4:0.4]
-set xrange [0:6.28]
+set xrange [0:2*pi]
 
 set title "Difference between Numerical and Analytical solutions of d(sinx)/dx"
 
