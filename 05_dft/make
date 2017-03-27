@@ -1,0 +1,3 @@
+gfortran -o run main.f95
+./run > out
+gnuplot draw.gnuplot
