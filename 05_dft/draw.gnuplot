@@ -1,7 +1,7 @@
 set term pdf
 set output "plot.pdf"
 
-set xlabel "longitude"
+set xlabel "Longitude (Deg_East)"
 set ylabel "Z500 (gpm)"
 
 set yrange [5000:6000]
