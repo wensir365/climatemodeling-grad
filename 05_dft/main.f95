@@ -19,7 +19,8 @@ program main
 	   5187.00,  5153.00,  5137.00,  5139.00,  5154.00,  5175.00,  5194.00,  5205.00,&
 	   5208.00,  5202.00,  5190.00,  5178.00,  5171.00,  5177.00,  5201.00,  5243.00,&
 	   5303.00,  5375.00,  5453.00,  5530.00,  5601.00,  5661.00,  5708.00,  5741.00,&
-	   5761.00,  5771.00,  5772.00,  5770.00,  5767.00,  5764.00,  5761.00,  5755.00 /), z0,z1,z2,z3,z5,z10,z20,z30
+	   5761.00,  5771.00,  5772.00,  5770.00,  5767.00,  5764.00,  5761.00,  5755.00 /), &
+	   z0,z1,z2,z3,z5,z10,z20,z30
 
 	complex, dimension(N) :: x,y
 	complex, dimension(-N/2:N/2-1)	:: c, c_tr
@@ -98,6 +99,46 @@ contains
 				x(i) = x(i) + coef(k)*exp(2.0*jj*Pi*k*i/N)
 			end do
 		end do
+	end subroutine
+
+	subroutine dft_1d_real(x,N,a,b)
+		!-- interface --
+		integer, intent(in) :: N
+		real, dimension(N), intent(in) :: x
+		real, dimension(0:N/2), intent(out) :: a, b
+		!-- local --
+		real, parameter		:: Pi = 3.1415926
+		integer :: i, k
+
+		do k = 0, N/2
+			a(k) = 0.0
+			b(k) = 0.0
+			do i = 1, N		! Sigma
+				a(k) = a(k) + x(i)*cos(2.0*Pi*k*i/N)
+				b(k) = b(k) + x(i)*sin(2.0*Pi*k*i/N)
+			end do
+			a(k) = 2.0*a(k)/N
+			b(k) = 2.0*b(k)/N
+		end do
+		a(0) 	= a(0)/2.0
+		a(N/2) 	= a(N/2)/2.0
+	end subroutine
+
+	subroutine idft_1d_real(a,b,N,x)
+		!-- interface --
+		integer, intent(in) :: N
+		real, dimension(0:N/2), intent(in) :: a, b
+		real, dimension(1:N), intent(out) :: x
+		!-- local --
+		real, parameter		:: Pi = 3.1415926
+		integer :: i, k
+
+		do i = 1, N
+			x(i) = 0.0
+			do k = 0, N/2
+				x(i) = x(i) + a(k)*cos(2.0*Pi*k*i/N) + b(k)*sin(2.0*Pi*k*i/N)
+			end do
+		end do 
 	end subroutine
 
 end program
