@@ -1,0 +1,9 @@
+C NCLFORTSTART
+   subroutine tran3d_tend(conc,Nvar,Nz,Ny,Nx,u,v,w,t,lev,lat,lon,Re,tend)
+      integer  Nvar,Nz,Ny,Nx
+      real     Re
+      real     lev(Nz), lat(Ny), lon(Nx)
+      real     u(Nx,Ny,Nz), v(Nx,Ny,Nz), w(Nx,Ny,Nz), t(Nx,Ny,Nz)
+      real     conc(Nx,Ny,Nz,Nvar)
+      real     tend(Nx,Ny,Nz,Nvar)
+C NCLEND
