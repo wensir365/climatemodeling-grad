@@ -1,15 +1,16 @@
 REAEME
-------
+======
 
-I didn't provide meteorology files in this package for fast internet transfer. 
-You need download below meterology fields from NCEP-DOE reanalysis, so-called NCEP2, by using "wget" command:
+I didn't provide meteorology files in this package so as to speed-up internet transfer. 
+You need to download below 4 meterology fields from NCEP-DOE reanalysis, so-called NCEP2, 
+or NCEP/NCAR reanalysis, so-called NCEP1, from NOAA/ERSL website by using "wget" command:
 
 wget ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis2/pressure/air.2010.nc
 wget ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis2/pressure/omega.2010.nc
 wget ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis2/pressure/uwnd.2010.nc
 wget ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis2/pressure/vwnd.2010.nc
 
-and put those 4 files into "test1_watervapor" and "test2_gfed" directories.
+and then put those 4 files into "test1_watervapor" and "test2_gfed" directories.
 
 Cheers!
 Xinyu
